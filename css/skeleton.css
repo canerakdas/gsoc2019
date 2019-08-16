@@ -416,3 +416,58 @@ there.
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
+
+
+canvas {
+  animation: 20s infinite spin;
+  z-index: 0;
+  width: 700px;
+  height: 500px;
+  position:absolute;
+  top:-220px;
+  left:calc(50% - 350px);
+}
+.container{
+  z-index: 1;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.plugin {
+    z-index: 333;
+    padding: 5px;
+    width: 130px;
+    text-align: center;
+    position: absolute;
+}
+
+.plugin div {
+    letter-spacing: 0.4px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.plugin a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #555;
+    width: 120px;
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 5px 0px;
+    border-radius: 2px;
+    border: 2px solid #555;
+}
+
+div#node-plugin {
+    top: 20px;
+    right: 20px;
+}
+
+div#arrow-plugin {
+    right: 20px;
+    top: 160px;
+}

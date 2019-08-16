@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
 
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<head>
   <meta charset="utf-8">
-  <title>Your page title here :)</title>
+  <title>ccNetViz - Node & Arrow Plugin</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -22,25 +20,272 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
 
-  <!-- Favicon
+  <!-- Javascript
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <script src="./js/ccNetViz.js" type="text/javascript"></script>
+  <script src="./js/plugins/ccNetViz-node-plugin.js" type="text/javascript"></script>
 
 </head>
-<body>
 
+<body>
+  <canvas id="canvas"></canvas>
+  <div id="node-plugin" class="plugin">
+    <div>Node Plugin</div>
+    <a href="https://helikarlab.github.io/ccNetViz/examples/node_plugin.html" target="_blank">Example</a>
+    <a href="https://github.com/HelikarLab/ccNetViz/tree/master/src/plugins/node" target="_blank">Documentation</a>
+  </div>
+  <div id="arrow-plugin" class="plugin">
+    <div>Arrow Plugin</div>
+    <a href="  https://helikarlab.github.io/ccNetViz/examples/arrow_plugin.html" target="_blank">Example</a>
+    <a href="https://github.com/HelikarLab/ccNetViz/tree/master/src/plugins/arrow" target="_blank">Documentation</a>
+  </div>
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
-        <h4>Basic Page</h4>
-        <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
+      <div class="column" style="margin-top: 33.333%">
+        <h5>Introduction</h5>
+        <p>
+          Graphs allow the visualization of related data, the graph loses its meaning partially when the number of nodes
+          increases. With this plugin, I aimed to present a more meaningful graph to the user by grouping the nodes.
+        </p>
+        <p>
+          I’ve even added a different graphical representation method (Pie chart, Radial histogram, etc.) in an existing
+          graph, and I’ve created a plugin that can have even more detailed statistical node images.
+        </p>
+      </div>
+      <div class="row">
+        <div class="column">
+          <h5>Plugin Structure</h5>
+          <p>
+            Basically, a structure was created that could work separately from the whole library and allow the user to
+            add their own shapes in addition to the predefined shapes.
+          </p>
+          <p style="text-align: center">
+            <img src="./images/structure.png" alt="Plugin Structure">
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <h5>Shapes</h5>
+          <div class="four columns">
+            <b>Polygons</b>
+            <ul>
+              <li>triangle</li>
+              <li>quadrilateral</li>
+              <li>pentagon</li>
+              <li>hexagon</li>
+              <li>heptagon</li>
+              <li>octagon</li>
+              <li>nonagon</li>
+              <li>decagon</li>
+            </ul>
+          </div>
+          <div class="four columns">
+            <b>Stars</b>
+            <ul>
+              <li>star-3</li>
+              <li>star-4</li>
+              <li>star-5</li>
+              <li>star-6</li>
+              <li>star-7</li>
+              <li>star-8</li>
+              <li>star-9</li>
+              <li>star-10</li>
+            </ul>
+          </div>
+          <div class="three columns">
+            <b>Customs</b>
+            <ul>
+              <li>square</li>
+              <li>vee</li>
+              <li>tag</li>
+            </ul>
+          </div>
+          <div class="three columns">
+            <b>Statistical nodes</b>
+            <ul>
+              <li>GaugeChart</li>
+              <li>RadialHistogram</li>
+              <li>PieChart</li>
+              <li>DoughnutChart</li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="column">
+          <p>
+            Users can create own shapes via this <a
+              href="https://helikarlab.github.io/ccNetViz/examples/texture_creator.html" target="_blank">example</a>.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <h5>Animations</h5>
+          <p>Various linear animation structures were created by creating multiple shapes per second.</p>
+          <div style="text-align:center">
+            <p><b>Color animation</b></p>
+            <img src="./images/color_animation.png" alt="Color Animation">
+            <p><b>Stroke animation</b></p>
+            <img src="./images/stroke_animation.png" alt="Stroke Animation">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <h5>Testing</h5>
+          <p>
+            I have prepared a continuous integration test for the continuity of the features. I used <a
+              href="https://slimerjs.org/" target="_blank">SlimerJS</a> because it
+            was able to draw graphs headless with <a href="https://www.mozilla.org/tr/firefox/" target="_blank">Mozilla
+              Firefox</a>.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <h5>Thanks</h5>
+          <b>Aleš Saska</b>
+          <p>
+            He has a good knowledge of Javascript and he is a great mentor!
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <h5>Examples</h5>
+          <ul>
+            <li>
+              <a href="https://helikarlab.github.io/ccNetViz/examples/node_plugin.html" target="_blank">Node Plugin</a>
+            </li>
+            <li>
+              <a href="https://helikarlab.github.io/ccNetViz/examples/arrow_plugin.html" target="_blank">Arrow
+                Plugin</a>
+            </li>
+          </ul>
+          <h5>Blogs</h5>
+          <ul>
+            <li>
+              <a target="_blank" href="https://medium.com/@canerakdas/node-edge-plugin-ec910fa2fc72">
+                Node & Arrow Plugin
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://medium.com/@canerakdas/graphs-with-the-statistical-nodes-5c8a1a0fa59f">
+                Graphs With The Statistical Nodes
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://medium.com/@canerakdas/how-to-draw-pie-chart-4466a5cb9b73">
+                How to Draw Pie Chart
+              </a>
+            </li>
+
+            <li>
+              <a target="_blank" href="https://medium.com/@canerakdas/creating-ccnetviz-plugins-eb6ed396a386">
+                Creating ccNetViz Plugins
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 
-<!-- End Document
+  <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script type="text/javascript">
+    var canvas = document.getElementById('canvas');
+
+    var shapes = [
+      "triangle",
+      "quadrilateral",
+      "pentagon",
+      "hexagon",
+      "heptagon",
+      "octagon",
+      "nonagon",
+      "ellipse",
+      "star",
+      "star-3",
+      "star-4",
+      "star-5",
+      "star-6",
+      "star-7",
+      "star-8",
+      "circle",
+      "star-9",
+      "star-10",
+      "vee",
+      "square",
+      "tag"];
+
+    var options = {
+      styles: {
+        'gsoc-0': {
+          type: 'Star',
+          spikes: 8,
+          rounded: true,
+          textureColor: '#fbba02',
+          inset: 1.3,
+          size: 50,
+        },
+        'gsoc-1': {
+          type: 'Ellipse',
+          size: 40,
+          textureColor: '#fbba02',
+          stroke: {
+            size: 4,
+            color: '#ffffff'
+          }
+        }
+      },
+    };
+
+    shapes.map(shape => {
+      options.styles[shape] = {
+        textureColor: "#ccc"
+      }
+    });
+    console.log(options)
+
+    var graph = new ccNetViz(canvas, options);
+
+    var nodes =
+      [
+        { "style": 'gsoc-0', "x": 0.5, "y": 0.5 },
+        { "style": 'gsoc-1', "x": 0.5, "y": 0.5 },
+        { "style": "triangle", "x": 0.95, "y": 0.5000000000000001 },
+        { "style": "quadrilateral", "x": 0.9298954872052313, "y": 0.6330117563329012 },
+        { "style": "pentagon", "x": 0.8713683230099418, "y": 0.7542048344031458 },
+        { "style": "hexagon", "x": 0.7796189027951129, "y": 0.8528106973771293 },
+        { "style": "heptagon", "x": 0.6627995651825302, "y": 0.9200677816049112 },
+        { "style": "octagon", "x": 0.5312902209722916, "y": 0.9500000000000002 },
+        { "style": "nonagon", "x": 0.39677605251672793, "y": 0.9399477436026159 },
+        { "style": "ellipse", "x": 0.2712092339888214, "y": 0.8908041995072664 },
+        { "style": "star", "x": 0.1657469282556836, "y": 0.8069359872697146 },
+        { "style": "star-3", "x": 0.08975992399540944, "y": 0.6957951655968546 },
+        { "style": "star-4", "x": 0.05, "y": 0.5672570842277819 },
+        { "style": "star-5", "x": 0.05, "y": 0.43274291577221824 },
+        { "style": "star-6", "x": 0.08975992399540939, "y": 0.3042048344031457 },
+        { "style": "star-7", "x": 0.16574692825568366, "y": 0.1930640127302854 },
+        { "style": "star-8", "x": 0.27120923398882163, "y": 0.10919580049273367 },
+        { "style": "circle", "x": 0.3967760525167278, "y": 0.0600522563973843 },
+        { "style": "star-9", "x": 0.5312902209722917, "y": 0.05 },
+        { "style": "star-10", "x": 0.6627995651825305, "y": 0.0799322183950891 },
+        { "style": "vee", "x": 0.7796189027951127, "y": 0.1471893026228708 },
+        { "style": "square", "x": 0.8713683230099418, "y": 0.24579516559685444 },
+        { "style": "tag", "x": 0.9298954872052313, "y": 0.36698824366709903 }];
+
+    var edges = [];
+
+    graph.set(nodes, edges).then(() => {
+      graph.draw();
+      console.log(JSON.stringify(nodes))
+    });
+  </script>
 </body>
+
 </html>
