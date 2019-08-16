@@ -482,10 +482,10 @@ img {
 }
 div#node-plugin {
     top: 20px;
-    right: 20px;
+    right: 0;
 }
 
 div#arrow-plugin {
-    right: 20px;
+    right: 0;
     top: 160px;
 }
