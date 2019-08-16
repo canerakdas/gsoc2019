@@ -403,16 +403,32 @@ there.
 
 
 /* Larger than mobile */
-@media (min-width: 400px) {}
+@media (min-width: 400px) {
+  canvas{
+    width: 450px!important;
+  }
+}
 
 /* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {}
+@media (min-width: 550px) {
+  canvas{
+    width: 500px!important;
+  }
+}
 
 /* Larger than tablet */
-@media (min-width: 750px) {}
+@media (min-width: 750px) {
+  canvas{
+    width: 500px!important;
+  }
+}
 
 /* Larger than desktop */
-@media (min-width: 1000px) {}
+@media (min-width: 1000px) {
+  canvas{
+    width: 700px!important;
+  }
+}
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
@@ -421,7 +437,7 @@ there.
 canvas {
   animation: 20s infinite spin;
   z-index: 0;
-  width: 700px;
+  width: 350px;
   height: 500px;
   position:absolute;
   top:-220px;
@@ -461,7 +477,9 @@ canvas {
     border-radius: 2px;
     border: 2px solid #555;
 }
-
+img {
+    max-width: 100%;
+}
 div#node-plugin {
     top: 20px;
     right: 20px;
