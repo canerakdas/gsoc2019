@@ -406,6 +406,7 @@ there.
 @media (min-width: 400px) {
   canvas{
     width: 450px!important;
+    left:calc(50% - 225px);
   }
 }
 
@@ -413,6 +414,7 @@ there.
 @media (min-width: 550px) {
   canvas{
     width: 500px!important;
+    left:calc(50% - 250px);
   }
 }
 
@@ -420,6 +422,7 @@ there.
 @media (min-width: 750px) {
   canvas{
     width: 500px!important;
+    left:calc(50% - 250px);
   }
 }
 
@@ -427,6 +430,7 @@ there.
 @media (min-width: 1000px) {
   canvas{
     width: 700px!important;
+    left:calc(50% - 350px);
   }
 }
 
@@ -441,7 +445,6 @@ canvas {
   height: 500px;
   position:absolute;
   top:-220px;
-  left:calc(50% - 350px);
 }
 .container{
   z-index: 1;
@@ -470,6 +473,7 @@ canvas {
     text-decoration: none;
     font-weight: bold;
     color: #555;
+    background: #fff;
     width: 120px;
     display: inline-block;
     margin-bottom: 10px;
