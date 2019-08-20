@@ -493,3 +493,9 @@ div#arrow-plugin {
     right: 0;
     top: 160px;
 }
+
+div#layout-plugin {
+    position: absolute;
+    right: 0;
+    top: 300px;
+}
